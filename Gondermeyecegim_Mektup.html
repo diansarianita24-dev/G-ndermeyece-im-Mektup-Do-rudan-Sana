@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Göndermeyeceğim Mektup</title>
+<style>
+  body {
+    font-family: 'Georgia', serif;
+    background-color: #fdfaf7;
+    color: #4b3f35;
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 30px;
+    border: 1px solid #e6ded6;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    line-height: 1.8;
+    text-align: center;
+  }
+  input[type="password"] {
+    padding: 10px;
+    border: 1px solid #d2c5ba;
+    border-radius: 8px;
+    font-size: 1em;
+    text-align: center;
+    outline: none;
+  }
+  button {
+    margin-top: 15px;
+    padding: 8px 18px;
+    font-size: 1em;
+    border: none;
+    background-color: #d6b8a1;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #c7a189;
+  }
+  .hidden {
+    display: none;
+    text-align: left;
+  }
+  h1 {
+    color: #7a5c51;
+  }
+  .heart {
+    text-align: center;
+    font-size: 2em;
+    color: #d67a7a;
+    margin: 15px 0;
+  }
+  .signature {
+    margin-top: 30px;
+    text-align: right;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div id="password-page">
+  <h1>🔒 Bizim için anlamı olan bir tarih</h1>
+  <p>Lütfen tarihi gir:</p>
+  <input type="password" id="passwordInput" placeholder="••••••"><br>
+  <button onclick="checkPassword()">Devam Et</button>
+</div>
+
+<div id="letter" class="hidden">
+  <h1>🌸 Göndermeyeceğim Mektup – Doğrudan Sana 🌸</h1>
+
+  <p>Merhaba…</p>
+
+  <p>Bu kelimeleri okuyacak mısın bilmiyorum.<br>
+  Ama içimde hâlâ kalan çok şey var ve geceler şu anda çok sessiz geliyor.<br>
+  Bu yüzden, izin ver, sana en sakin hâlimle yazayım, bu satırlardan.</p>
+
+  <p>Hâlâ senin için dua ediyorum.<br>
+  Kalbim hâlâ senin iyi olmanı diliyor.<br>
+  Kendi yolunu seçtiğini biliyorum ve buna saygı duyuyorum.<br>
+  Ama aynı zamanda, her şeyin bende iyi olduğunu da söyleyemem.<br>
+  Üç gün geçti, ama sanki üç yıl gibi.</p>
+
+  <p>Telefon ekranına hâlâ bakıyorum, belki bir mesaj gelir diye,<br>
+  biliyorum artık gelmeyecek.<br>
+  Ama yine de bekliyorum, aptal olduğumdan değil,<br>
+  seni gerçekten sevdiğim için.</p>
+
+  <p>Seni suçlamıyorum.<br>
+  Belki sadece huzur istiyorsun ve benim öğrenmem gereken şey şu<br>
+  bazen birini sevmenin yolu gitmektir.<br>
+  Sadece diliyorum ki, beni hatırladığında pişmanlık hissetme.<br>
+  Küçük de olsa, soluk da olsa,<br>
+  güzel bir iz olarak kalmak istiyorum hafızanda.</p>
+
+  <p>Seni yavaşça bırakmayı öğreneceğim.<br>
+  Ne öfkeyle, ne gözyaşlarıyla<br>
+  sadece eskisi gibi aynı duayla:</p>
+
+  <p><em>Mutlu ol, işin yolunda gitsin, sağlığın iyi olsun, kalbin huzur bulsun.</em></p>
+
+  <p>Çünkü ben seni gerçekten sevdim<br>
+  ve gerçekten sevilen biri nefretle hatırlanmaz.</p>
+
+  <p>Kendi yolunda iyi yürü, sevgilim.<br>
+  Bana kendimi sevilmiş hissettirdiğin için teşekkür ederim,<br>
+  sonunda tek başıma sevmeyi öğrenmem gerekse bile.</p>
+
+  <p>Kendine iyi bak.<br>
+  Dilerim dualarım sana ulaşır, seni dünyanın soğukluğundan korur,<br>
+  seni sıcacık sarar.</p>
+
+  <p>Senin her zaman sevildiğini hissetmeni isterim.<br>
+  Sözlerim hâlâ aynı,<br>
+  bu dünyada kendini sevemezsen,<br>
+  ben seni iki katı seveceğim.</p>
+
+  <div class="heart">🤍</div>
+
+  <div class="signature">
+  Sevgilerle,<br>
+  Anita, Nita, Dian, Diana, Angel 🤍
+  </div>
+</div>
+
+<script>
+function checkPassword() {
+  var input = document.getElementById("passwordInput").value;
+  if (input === "220625") {
+    document.getElementById("password-page").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+  } else {
+    alert("Yanlış tarih 💭");
+  }
+}
+</script>
+
+</body>
+</html>
